@@ -24,7 +24,9 @@ def execute_query(df, output_file):
     WHERE
         PAT_MRN_ID IN ({pat_mrn_ids_str})
     GROUP BY
-        PAT_GENDER_DESC, PAT_RACE_DESC, PAT_ETHNIC_GROUP_DESC
+        PAT_RACE_DESC, PAT_ETHNIC_GROUP_DESC
+    ORDER BY
+        count(*) DESC
     """
 
     # Execute the query and load the results into a pandas DataFrame

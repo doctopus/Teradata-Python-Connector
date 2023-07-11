@@ -29,8 +29,8 @@ end_date = pd.to_datetime('2023-05-31')
 final_filtered_df = data_wrangling.perform_data_wrangling(carisData, localData, tempusData, start_date, end_date)
 
 # Set option to show all rows of dataframe
-pd.set_option('display.max_rows', None)
-print(final_filtered_df)
+# pd.set_option('display.max_rows', None)
+# print(final_filtered_df)
 
 pat_mrn_ids = final_filtered_df["PAT_MRN_ID"].tolist()
 # Create the formatted string
@@ -50,4 +50,4 @@ print("Number of patients in the time range:", num_rows)
 query_results = database_queryback.execute_query(final_filtered_df, "io/results.csv")
 
 # Use the query results for further processing or output
-print("Report Data:", query_results)
+print("Report Data:", "\n", query_results)
