@@ -1,3 +1,6 @@
+# This independent script only produces result for Caris Data.
+# This is Proof of Concept only; Don't use for final reporting.
+# The main.py script combines tempus and caris. Use Main Script.
 import sqlalchemy as sa
 import pandas as pd
 
@@ -10,8 +13,8 @@ end_date = pd.to_datetime('2023-05-31').date()
 def main():
     # Connection details
     Teradata_Host = "tdprod1.ccf.org"
-    Teradata_User = ""
-    Teradata_User_Password = ""
+    Teradata_User = "beherat2"
+    Teradata_User_Password = "Dev@nodejs01"
 
     # Create the connection URL
     connection_url = f"teradatasql://{Teradata_Host}/"f"?user={Teradata_User}&password={Teradata_User_Password}&logmech=LDAP"
